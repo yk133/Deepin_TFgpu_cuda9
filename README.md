@@ -3,12 +3,12 @@ QwQ版本对照表查了资料几天，终于搞出来了。
 
 
 ### 1 在Deepi中切换显卡为Prime模式,自动安装显卡驱动，我目前默认是390.67，大于384，及格。
-### 2 下载cuda9，cudnn对应版本，按理说deb包应该安装更好更快，但是我发现我装上没什么用QwQ。
+### 2 下载cuda9.0，cudnn对应版本(我是7.5)，按理说deb包应该安装更好更快，但是我发现我装上没什么用QwQ。
 >2.1 安装cuda9 
 >安装中如果你3s内被中断了.
->>       2.1.1 说是gcc版本不支持，就安装sudo apt install gcc-5,用软连接替换/usr/bin/gcc 到你的/usr/bin/gcc-5 【切记不要autoremove卸载现有的gcc 和g++】
->>       2.1.2 如果是缺库了，如libGUI.so， 就sudo apt install apt-file , sudo apt update,
-       sudo apt-file search [缺失的文件]
+       2.1.1 说是gcc版本不支持，就安装sudo apt install gcc-5,用软连接替换/usr/bin/gcc 到你的/usr/bin/gcc-5 【切记不要autoremove卸载现有的gcc 和g++】
+       2.1.2 如果是缺库了，如libGUI.so， 就sudo apt install apt-file , sudo apt update,
+      sudo apt-file search [缺失的文件]
        然后安装对应的包，注意一下，一般第一个就行了，但是如果你安装的时候要卸载某些包的话或者冲突，就不要装这个。
 
 
@@ -25,7 +25,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 ```
 
 ### 最后就安装pip3， sudo pip3 install tensorflow_gpu==1.11
-[这里pip可以换成国内镜像源]
+[这里pip可以换成国内镜像源，具体可搜索]
 然后在python3中import tensorflow或者网上找代码进行gpu测试和对比
 
 
