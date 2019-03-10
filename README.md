@@ -9,7 +9,7 @@ QwQ版本对照表查了资料几天，终于搞出来了。
        2.1.1 说是gcc版本不支持，就安装sudo apt install gcc-5,用软连接替换/usr/bin/gcc 到你的/usr/bin/gcc-5 【切记不要autoremove卸载现有的gcc 和g++】
        2.1.2 如果是缺库了，如libGUI.so， 就sudo apt install apt-file , sudo apt update,
       sudo apt-file search [缺失的文件]
-       然后安装对应的包，注意一下，一般第一个就行了，但是如果你安装的时候要卸载某些包的话或者冲突，就不要装这个。
+       然后安装对应的包，注意一下，一般第一个就行了，但是如果你安装的时候要卸载某些包的话或者冲突，就不要装这个。我安装的是libcuda1
 
 
 >2.2 复制cudnn里的内容:include和lib64复制到cuda下的include和lib64即可
